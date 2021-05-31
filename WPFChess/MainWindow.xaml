@@ -15,7 +15,7 @@
             <Setter Property="Control.Background" Value="White" />
         </Style>
     </Window.Resources>
-    <Grid x:Name="MainDesk" Background="Gray">
+    <Grid x:Name="MainDesk" Background="Gray" Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
