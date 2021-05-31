@@ -24,5 +24,10 @@ namespace WPFChess
         {
             InitializeComponent();
         }
+
+        private void x1y1_Click_1(object sender, RoutedEventArgs e)
+        {
+            x1y1.Content = 'K';
+        }
     }
 }

@@ -7,16 +7,24 @@
         mc:Ignorable="d"
         Title="Chess" Height="450" Width="450">
     <Window.Resources>
-        <Style x:Key="BlackBack">
+        <Style x:Key="Cell">
+            <Setter Property="TextBlock.FontSize" Value="32" />
+        </Style>
+        <Style x:Key="BlackCell" BasedOn="{StaticResource Cell}">
             <Setter Property="Control.Background" Value="Black" />
             <Setter Property="TextElement.Foreground" Value="White" />
         </Style>
-        <Style x:Key="WhiteBack">
+        <Style x:Key="WhiteCell"  BasedOn="{StaticResource Cell}">
+            <Setter Property="Control.Background" Value="White" />
+        </Style>
+        <Style x:Key="Menu">
             <Setter Property="Control.Background" Value="White" />
         </Style>
     </Window.Resources>
-    <Grid x:Name="MainDesk" Background="Gray" Margin="15">
+
+    <Grid x:Name="MainDesk" Background="White" Margin="15, 0, 15, 15">
         <Grid.RowDefinitions>
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -36,76 +44,78 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Button x:Name="x1y1" Grid.Column="0" Grid.Row="0" Content="1" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x2y1" Grid.Column="1" Grid.Row="0" Content="2" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x3y1" Grid.Column="2" Grid.Row="0" Content="3" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x4y1" Grid.Column="3" Grid.Row="0" Content="4" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x5y1" Grid.Column="4" Grid.Row="0" Content="5" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x6y1" Grid.Column="5" Grid.Row="0" Content="6" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x7y1" Grid.Column="6" Grid.Row="0" Content="7" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x8y1" Grid.Column="7" Grid.Row="0" Content="8" Style="{StaticResource WhiteBack}"/>
+        <Button x:Name="x1y1" Grid.Column="0" Grid.Row="1" Content="" Style="{StaticResource BlackCell}" Click="x1y1_Click_1"/>
+        <Button x:Name="x2y1" Grid.Column="1" Grid.Row="1" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x3y1" Grid.Column="2" Grid.Row="1" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x4y1" Grid.Column="3" Grid.Row="1" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x5y1" Grid.Column="4" Grid.Row="1" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x6y1" Grid.Column="5" Grid.Row="1" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x7y1" Grid.Column="6" Grid.Row="1" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x8y1" Grid.Column="7" Grid.Row="1" Content="" Style="{StaticResource WhiteCell}"/>
 
-        <Button x:Name="x1y2" Grid.Column="0" Grid.Row="1" Content="1" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x2y2" Grid.Column="1" Grid.Row="1" Content="2" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x3y2" Grid.Column="2" Grid.Row="1" Content="3" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x4y2" Grid.Column="3" Grid.Row="1" Content="4" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x5y2" Grid.Column="4" Grid.Row="1" Content="5" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x6y2" Grid.Column="5" Grid.Row="1" Content="6" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x7y2" Grid.Column="6" Grid.Row="1" Content="7" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x8y2" Grid.Column="7" Grid.Row="1" Content="8" Style="{StaticResource BlackBack}"/>
+        <Button x:Name="x1y2" Grid.Column="0" Grid.Row="2" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x2y2" Grid.Column="1" Grid.Row="2" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x3y2" Grid.Column="2" Grid.Row="2" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x4y2" Grid.Column="3" Grid.Row="2" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x5y2" Grid.Column="4" Grid.Row="2" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x6y2" Grid.Column="5" Grid.Row="2" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x7y2" Grid.Column="6" Grid.Row="2" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x8y2" Grid.Column="7" Grid.Row="2" Content="" Style="{StaticResource BlackCell}"/>
 
-        <Button x:Name="x1y3" Grid.Column="0" Grid.Row="2" Content="1" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x2y3" Grid.Column="1" Grid.Row="2" Content="2" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x3y3" Grid.Column="2" Grid.Row="2" Content="3" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x4y3" Grid.Column="3" Grid.Row="2" Content="4" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x5y3" Grid.Column="4" Grid.Row="2" Content="5" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x6y3" Grid.Column="5" Grid.Row="2" Content="6" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x7y3" Grid.Column="6" Grid.Row="2" Content="7" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x8y3" Grid.Column="7" Grid.Row="2" Content="8" Style="{StaticResource WhiteBack}"/>
+        <Button x:Name="x1y3" Grid.Column="0" Grid.Row="3" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x2y3" Grid.Column="1" Grid.Row="3" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x3y3" Grid.Column="2" Grid.Row="3" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x4y3" Grid.Column="3" Grid.Row="3" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x5y3" Grid.Column="4" Grid.Row="3" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x6y3" Grid.Column="5" Grid.Row="3" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x7y3" Grid.Column="6" Grid.Row="3" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x8y3" Grid.Column="7" Grid.Row="3" Content="" Style="{StaticResource WhiteCell}"/>
 
-        <Button x:Name="x1y4" Grid.Column="0" Grid.Row="3" Content="1" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x2y4" Grid.Column="1" Grid.Row="3" Content="2" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x3y4" Grid.Column="2" Grid.Row="3" Content="3" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x4y4" Grid.Column="3" Grid.Row="3" Content="4" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x5y4" Grid.Column="4" Grid.Row="3" Content="5" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x6y4" Grid.Column="5" Grid.Row="3" Content="6" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x7y4" Grid.Column="6" Grid.Row="3" Content="7" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x8y4" Grid.Column="7" Grid.Row="3" Content="8" Style="{StaticResource BlackBack}"/>
+        <Button x:Name="x1y4" Grid.Column="0" Grid.Row="4" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x2y4" Grid.Column="1" Grid.Row="4" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x3y4" Grid.Column="2" Grid.Row="4" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x4y4" Grid.Column="3" Grid.Row="4" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x5y4" Grid.Column="4" Grid.Row="4" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x6y4" Grid.Column="5" Grid.Row="4" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x7y4" Grid.Column="6" Grid.Row="4" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x8y4" Grid.Column="7" Grid.Row="4" Content="" Style="{StaticResource BlackCell}"/>
 
-        <Button x:Name="x1y5" Grid.Column="0" Grid.Row="4" Content="1" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x2y5" Grid.Column="1" Grid.Row="4" Content="2" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x3y5" Grid.Column="2" Grid.Row="4" Content="3" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x4y5" Grid.Column="3" Grid.Row="4" Content="4" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x5y5" Grid.Column="4" Grid.Row="4" Content="5" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x6y5" Grid.Column="5" Grid.Row="4" Content="6" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x7y5" Grid.Column="6" Grid.Row="4" Content="7" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x8y5" Grid.Column="7" Grid.Row="4" Content="8" Style="{StaticResource WhiteBack}"/>
+        <Button x:Name="x1y5" Grid.Column="0" Grid.Row="5" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x2y5" Grid.Column="1" Grid.Row="5" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x3y5" Grid.Column="2" Grid.Row="5" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x4y5" Grid.Column="3" Grid.Row="5" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x5y5" Grid.Column="4" Grid.Row="5" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x6y5" Grid.Column="5" Grid.Row="5" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x7y5" Grid.Column="6" Grid.Row="5" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x8y5" Grid.Column="7" Grid.Row="5" Content="" Style="{StaticResource WhiteCell}"/>
 
-        <Button x:Name="x1y6" Grid.Column="0" Grid.Row="5" Content="1" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x2y6" Grid.Column="1" Grid.Row="5" Content="2" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x3y6" Grid.Column="2" Grid.Row="5" Content="3" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x4y6" Grid.Column="3" Grid.Row="5" Content="4" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x5y6" Grid.Column="4" Grid.Row="5" Content="5" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x6y6" Grid.Column="5" Grid.Row="5" Content="6" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x7y6" Grid.Column="6" Grid.Row="5" Content="7" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x8y6" Grid.Column="7" Grid.Row="5" Content="8" Style="{StaticResource BlackBack}"/>
+        <Button x:Name="x1y6" Grid.Column="0" Grid.Row="6" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x2y6" Grid.Column="1" Grid.Row="6" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x3y6" Grid.Column="2" Grid.Row="6" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x4y6" Grid.Column="3" Grid.Row="6" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x5y6" Grid.Column="4" Grid.Row="6" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x6y6" Grid.Column="5" Grid.Row="6" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x7y6" Grid.Column="6" Grid.Row="6" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x8y6" Grid.Column="7" Grid.Row="6" Content="" Style="{StaticResource BlackCell}"/>
 
-        <Button x:Name="x1y7" Grid.Column="0" Grid.Row="6" Content="1" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x2y7" Grid.Column="1" Grid.Row="6" Content="2" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x3y7" Grid.Column="2" Grid.Row="6" Content="3" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x4y7" Grid.Column="3" Grid.Row="6" Content="4" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x5y7" Grid.Column="4" Grid.Row="6" Content="5" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x6y7" Grid.Column="5" Grid.Row="6" Content="6" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x7y7" Grid.Column="6" Grid.Row="6" Content="7" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x8y7" Grid.Column="7" Grid.Row="6" Content="8" Style="{StaticResource WhiteBack}"/>
+        <Button x:Name="x1y7" Grid.Column="0" Grid.Row="7" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x2y7" Grid.Column="1" Grid.Row="7" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x3y7" Grid.Column="2" Grid.Row="7" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x4y7" Grid.Column="3" Grid.Row="7" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x5y7" Grid.Column="4" Grid.Row="7" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x6y7" Grid.Column="5" Grid.Row="7" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x7y7" Grid.Column="6" Grid.Row="7" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x8y7" Grid.Column="7" Grid.Row="7" Content="" Style="{StaticResource WhiteCell}"/>
 
-        <Button x:Name="x1y8" Grid.Column="0" Grid.Row="7" Content="1" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x2y8" Grid.Column="1" Grid.Row="7" Content="2" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x3y8" Grid.Column="2" Grid.Row="7" Content="3" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x4y8" Grid.Column="3" Grid.Row="7" Content="4" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x5y8" Grid.Column="4" Grid.Row="7" Content="5" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x6y8" Grid.Column="5" Grid.Row="7" Content="6" Style="{StaticResource BlackBack}"/>
-        <Button x:Name="x7y8" Grid.Column="6" Grid.Row="7" Content="7" Style="{StaticResource WhiteBack}"/>
-        <Button x:Name="x8y8" Grid.Column="7" Grid.Row="7" Content="8" Style="{StaticResource BlackBack}"/>
+        <Button x:Name="x1y8" Grid.Column="0" Grid.Row="8" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x2y8" Grid.Column="1" Grid.Row="8" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x3y8" Grid.Column="2" Grid.Row="8" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x4y8" Grid.Column="3" Grid.Row="8" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x5y8" Grid.Column="4" Grid.Row="8" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x6y8" Grid.Column="5" Grid.Row="8" Content="" Style="{StaticResource BlackCell}"/>
+        <Button x:Name="x7y8" Grid.Column="6" Grid.Row="8" Content="" Style="{StaticResource WhiteCell}"/>
+        <Button x:Name="x8y8" Grid.Column="7" Grid.Row="8" Content="" Style="{StaticResource BlackCell}"/>
+
+        <Button x:Name="Menu" Grid.ColumnSpan="8" Grid.Row="0" Padding="0, 5, 0, 0"> Start play</Button>
     </Grid>
 </Window>
