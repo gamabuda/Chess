@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPFChess.SelectorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFChess"
+        mc:Ignorable="d"
+        Title="SelectorWindow" Height="300" Width="300">
+    <Window.Resources>
+        <Style x:Key="btn">
+            <Setter Property="Control.Background" Value="AliceBlue"></Setter>
+            <Setter Property="Control.Margin" Value="5"></Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid x:Name="MainSelectore" Background="White" Margin="15, 15, 15, 15">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="King" Grid.Column="0" Grid.Row="0" Style="{StaticResource btn}" Click="King_Click">King</Button>
+        <Button x:Name="Queen" Grid.Column="1" Grid.Row="0" Style="{StaticResource btn}" Click="Queen_Click">Queen</Button>
+        <Button x:Name="Bishop" Grid.Column="0" Grid.Row="1" Style="{StaticResource btn}" Click="Bishop_Click">Bishop</Button>
+        <Button x:Name="Knight" Grid.Column="1" Grid.Row="1" Style="{StaticResource btn}" Click="Knight_Click">Knight</Button>
+        <Button x:Name="Rook" Grid.Column="0" Grid.Row="2" Style="{StaticResource btn}" Click="Rook_Click">Rook</Button>
+        <Button x:Name="Pawn" Grid.Column="1" Grid.Row="2" Style="{StaticResource btn}" Click="Pawn_Click">Pawn</Button>
+    </Grid>
+</Window>

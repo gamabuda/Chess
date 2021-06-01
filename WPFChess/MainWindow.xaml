@@ -116,6 +116,7 @@
         <Button x:Name="x7y8" Grid.Column="6" Grid.Row="8" Content="" Style="{StaticResource WhiteCell}"/>
         <Button x:Name="x8y8" Grid.Column="7" Grid.Row="8" Content="" Style="{StaticResource BlackCell}"/>
 
-        <Button x:Name="Menu" Grid.ColumnSpan="8" Grid.Row="0" Padding="0, 5, 0, 0"> Start play</Button>
+        <Button x:Name="Add" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Click="Add_Click">Add</Button>
+        <Button x:Name="Del" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="0" Click="Del_Click">Del</Button>
     </Grid>
 </Window>
